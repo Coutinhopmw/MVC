@@ -14,7 +14,6 @@
             }
             
             $query = "SELECT * FROM $usertable WHERE nome = '$nick' and senha = '$pass'";
-            echo $query;
             $result = mysqli_query($conn, $query);
             
             if(!empty($result) && mysqli_num_rows($result) == 1){
@@ -49,6 +48,7 @@
             }
         }
 
+
         public function rescue($email){
             $servername = "localhost";
             $database = "cadastro";
@@ -70,6 +70,30 @@
                 return true;
             }else{
                 return false;
+            }
+        }
+
+        public function rescuesenha($email){
+            $servername = "localhost";
+            $database = "cadastro";
+            $username = "root";
+            $password = null;
+            $usertable="cad";
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $database);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+            
+            $query = "SELECT * FROM $usertable WHERE email = '$email'";
+            
+            $result = mysqli_query($conn, $query);
+            
+            if(!empty($result) && mysqli_num_rows($result) == 1){
+                $row = mysqli_fetch_array($result);
+                $your_field = "senha";
+                return $row["$your_field"];
             }
         }
     }

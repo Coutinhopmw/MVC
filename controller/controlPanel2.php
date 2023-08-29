@@ -17,7 +17,14 @@ class rec{
                 if(isset($_POST['email']) && !empty($_POST['email'])){
                     $email = $_POST['email'];
                     if($model->rescue($email)==true){
-                        require_once "../view/sucess.html";
+                        ini_set( 'display_errors', 1 );
+                        error_reporting( E_ALL );
+                        $from = "test@hostinger-tutorials.com";
+                        $to = $email;
+                        $subject = "Pedido de recuperação de senha";
+                        $message = "Sua senha é " .$model->rescuesenha($email);
+                        $headers = "From:" . $from;
+                        mail($to,$subject,$message, $headers);
                     }else{
                         echo "email não existe no banco de dados";
                     }
