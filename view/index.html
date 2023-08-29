@@ -18,17 +18,19 @@
                     <img src="./imagens/brasãoUFT_fundotransparente_RGB.png"
                         alt="Brasão da universidade federal do Tocantins">
                 </div>
-                <div class="form-group textfield">
-                    <label for="emialLogin"> Email</label>
-                    <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp"
-                        placeholder="Digite seu email">
-                </div>
-                <div class="form-group textfield">
-                    <label for="senhaLogin"> Senha</label>
-                    <input type="password" class="form-control" id="senhaLogin" placeholder="Digite sua senha">
-                </div>
-                <button type="button" id="btn-login" class="btn btn-success btnLogin">Entrar</button>
-                <button type="button" id="btn-help" class="btn btn-secondary btnLogin">Esqueci a senha</button>
+                <form action="../controller/controlPanel.php" method="get">
+                    <div class="form-group textfield">
+                        <label for="emialLogin"> Email</label>
+                        <input type="text" class="form-control" id="emailLogin" name="slogin" aria-describedby="emailHelp"
+                            placeholder="Digite seu email"> 
+                    </div>
+                    <div class="form-group textfield">
+                        <label for="senhaLogin"> Senha</label>
+                            <input type="password" class="form-control" id="senhaLogin" name="ssenha" placeholder="Digite sua senha">
+                    </div>
+                    <input type="submit" id="btn-login" name="enter" class="btn btn-success btnLogin"></input>
+                    <input type="submit" id="btn-help" name="RecSenha" class="btn btn-secondary btnLogin" value="Esqueci a senha"></input>
+                </form>
             </div>
         </div>
     </div>

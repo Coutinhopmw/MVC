@@ -13,11 +13,11 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
             
-            $query = "SELECT * FROM $usertable WHERE nome=$nick and senha=$pass";
-            
+            $query = "SELECT * FROM $usertable WHERE nome = '$nick' and senha = '$pass'";
+            echo $query;
             $result = mysqli_query($conn, $query);
             
-            if($result){
+            if(!empty($result) && mysqli_num_rows($result) == 1){
                 return true;
             }else{
                 return false;
@@ -62,11 +62,11 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
             
-            $query = "SELECT * FROM $usertable WHERE email=$email";
+            $query = "SELECT * FROM $usertable WHERE email = '$email'";
             
             $result = mysqli_query($conn, $query);
             
-            if($result){
+            if(!empty($result) && mysqli_num_rows($result) == 1){
                 return true;
             }else{
                 return false;
