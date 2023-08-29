@@ -3,16 +3,9 @@
 
 function login() {
     var login = document.getElementById('nick').value;
-    var password = document.getElementById('key').value;
+    var key = document.getElementById('key').value;
 
-    if (login == "admin" && password == "admin") {
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Your work has been saved',
-            showConfirmButton: false,
-            timer: 100
-          })
+    if (login == "admin" && key == "admin") {
         location.href = 'register.html';
     }else{
         Swal.fire({
@@ -22,3 +15,8 @@ function login() {
         })
     }
 }
+
+function password() {
+    location.href = 'password.html';
+}
+
