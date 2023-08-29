@@ -5,17 +5,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <div class="mainLogin">
-        <div class="rightLogin">
-
+    <header>
+        <div class="register-content">
+            <div class="register-img">
+                <img src="./imagens/brasãoUFT_fundotransparente_RGB.png" alt="">
+            </div>
+            <div class="register-profile">
+                <i class="fa-solid fa-user"></i>
+                <a href="#">User Profile</a>
+            </div>
         </div>
-    </div>
+    </header>
+
+    <section>
+        <div class="mainLogin">
+            <div class="register-conteiner">
+                <div class="register-login">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-4">
+                            <label for="validationCustomUsername" class="form-label">User name</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="key" value="" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom02" class="form-label">E-mail</label>
+                            <input type="mail" class="form-control" id="validationCustom02" value="" required>
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="table-conteiner">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">User name</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Perfil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <footer class="footer-conteiner">
         <div class="footer-class">
             <div class="img-footer">
@@ -30,5 +102,6 @@
         </div>
     </footer>
 </body>
+<script src="https://kit.fontawesome.com/4bfe745599.js" crossorigin="anonymous"></script>
 
 </html>
