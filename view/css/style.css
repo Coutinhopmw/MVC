@@ -75,7 +75,6 @@ body{
     font-size: 12pt;
     box-shadow: 0px 10px 40px #00000056;
     box-sizing: border-box;
-    
 }
 
 .textfield > label{
@@ -98,17 +97,81 @@ body{
     letter-spacing: 2px;
     box-shadow: 0px 10px 40px -12px #00000056;
 }
+
+.register-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    background: rgb(226, 233, 249);
+}
+
+.register-content img{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    margin-left: 50px;
+}   
+
+.register-profile{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 1250px;
+    margin-top: 20px;
+}
+
+.register-profile i {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.register-profile a {
+    text-decoration: none;
+    font-size: small;
+    color: black;
+}
+
+.register-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    height: 100%px;
+}
+
+.register-login{
+    width: 1000px;
+    height: 200px;
+}
+
+.table-conteiner{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 17%;
+    margin-bottom: 5%;
+}
+
 .footer-conteiner{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 130px;
-    background: rgba(6, 78, 212, 0.824);
-    color: white;
+    background: rgb(201, 207, 222);
+    color: rgb(0, 0, 0);
     overflow: hidden;
 }
-.footer-conteiner p {
+.footer-conteiner h5 {
+    margin-top: 20px;
+    color: black;
     font-size: 10px;
 }
 
@@ -120,9 +183,9 @@ body{
 }
 
 .footer-class img{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 5px;
-    margin-left: 40px;
+    margin-left: 50px;
 }
 
