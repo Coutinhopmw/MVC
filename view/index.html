@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost/PHP/MVC/view/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/PHP/MVC/view/css/style.css">
 </head>
+
 <body>
-    
+    <div class="mainLogin">
+        <div class="rightLogin">
+            <div class="cardLogin">
+                <div class="image">
+                    <img src="http://localhost/PHP/MVC/view/imagens/brasãoUFT_fundotransparente_RGB.png"
+                        alt="Brasão da universidade federal do Tocantins">
+                </div>
+                <form action="http://localhost/PHP/MVC/controller/controlPanel.php" method="get">
+                    <div class="form-group textfield">
+                        <label for="emialLogin"> Nick </label>
+                        <input type="text" class="form-control" id="emailLogin" name="slogin" aria-describedby="emailHelp"
+                            placeholder="Digite seu nick"> 
+                    </div>
+                    <div class="form-group textfield">
+                        <label for="senhaLogin"> Senha</label>
+                            <input type="password" class="form-control" id="senhaLogin" name="ssenha" placeholder="Digite sua senha">
+                    </div>
+                    <input type="submit" id="btn-login" name="enter" class="btn btn-success btnLogin" value="Entrar" onclick="login"></input>
+                    <input type="submit" id="btn-help" name="RecSenha" class="btn btn-secondary btnLogin" value="Esqueci a senha"></input>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-conteiner">
+            <div class="footer-class">
+                <div class="img-footer">
+                    <img src="http://localhost/PHP/MVC/view/imagens/brasãoUFT_fundotransparente_RGB.png" alt="">
+                </div>
+                <div class="img-footer">
+                    <img src="http://localhost/PHP/MVC/view/imagens/logocurso.png" alt="">
+                </div>
+            </div>
+            <h5>DESENVOLVIDO POR CÁSSIO COUTINHO E LUIZ FELIPE, DISCIPLINA DE ENGENHARIA DE SOFTWARE</h5>
+        </div>
+    </footer>
 </body>
+<script src="http://localhost/PHP/MVC/view/javascript/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>
