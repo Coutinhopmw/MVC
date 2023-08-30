@@ -16,9 +16,10 @@ class control{
                 if(isset($_GET['ssenha']) && !empty($_GET['ssenha'])){
                     $senha = $_GET['ssenha'];
                     if($model->busca($nick, $senha)==true){
-                        require_once "../view/sucess.html";
+                        header('Location: controlPanel3.php');
+                        exit;
                     }else{
-                        echo 'email ou senha incorretos ou não cadastrados';
+                        echo '<script type="text/JavaScript"> Swal.fire({icon: error, title: Erro, text: Usuário ou senhas incorreta!, }) </script>';
                     }
                 }
             }else{
@@ -26,9 +27,8 @@ class control{
             }
         }else{
             if(isset($_GET['RecSenha'])){
-                include "controlPanel2.php";
-                $pp = new rec();
-                $pp->pq();
+                header('Location: controlPanel2.php');
+                exit;
             }
         }
     }
